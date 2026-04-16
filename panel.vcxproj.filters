@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="entry.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="panel.cpp" />
+    <ClCompile Include="wnd_proc.cpp" />
+    <ClCompile Include="imgui\imgui.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_draw.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_impl_dx9.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_impl_win32.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_tables.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_widgets.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="lemonhook\src\mem.cpp">
+      <Filter>lemonhook\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lemonhook\src\details\details.cpp">
+      <Filter>lemonhook\src\details</Filter>
+    </ClCompile>
+    <ClCompile Include="lemonhook\src\details\detour_base.cpp">
+      <Filter>lemonhook\src\details</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="main.hpp" />
+    <ClInclude Include="panel.hpp" />
+    <ClInclude Include="wnd_proc.hpp" />
+    <ClInclude Include="samp_base.hpp" />
+    <ClInclude Include="imgui\imconfig.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui_impl_dx9.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui_impl_win32.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui_internal.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imstb_rectpack.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imstb_textedit.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imstb_truetype.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\include\lemon\detour.hpp">
+      <Filter>lemonhook\include\lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\include\lemon\hook.hpp">
+      <Filter>lemonhook\include\lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\include\lemon\mem.hpp">
+      <Filter>lemonhook\include\lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\include\lemon\details\details.hpp">
+      <Filter>lemonhook\include\lemon\details</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\include\lemon\details\detour_base.hpp">
+      <Filter>lemonhook\include\lemon\details</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\include\lemon\details\detour_callback.hpp">
+      <Filter>lemonhook\include\lemon\details</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\include\lemon\details\hook_base.hpp">
+      <Filter>lemonhook\include\lemon\details</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\include\lemon\details\hook_callback.hpp">
+      <Filter>lemonhook\include\lemon\details</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\xbyak\xbyak.h">
+      <Filter>lemonhook\xbyak</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\xbyak\xbyak_bin2hex.h">
+      <Filter>lemonhook\xbyak</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\xbyak\xbyak_mnemonic.h">
+      <Filter>lemonhook\xbyak</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\xbyak\xbyak_util.h">
+      <Filter>lemonhook\xbyak</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\zydis\ZycoreExportConfig.h">
+      <Filter>lemonhook\zydis</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\zydis\ZydisExportConfig.h">
+      <Filter>lemonhook\zydis</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\zydis\Zydis\Decoder.h">
+      <Filter>lemonhook\zydis\Zydis</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\zydis\Zydis\DecoderTypes.h">
+      <Filter>lemonhook\zydis\Zydis</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\zydis\Zydis\Formatter.h">
+      <Filter>lemonhook\zydis\Zydis</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\zydis\Zydis\FormatterBuffer.h">
+      <Filter>lemonhook\zydis\Zydis</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\zydis\Zydis\MetaInfo.h">
+      <Filter>lemonhook\zydis\Zydis</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\zydis\Zydis\Mnemonic.h">
+      <Filter>lemonhook\zydis\Zydis</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\zydis\Zydis\Register.h">
+      <Filter>lemonhook\zydis\Zydis</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\zydis\Zydis\SharedTypes.h">
+      <Filter>lemonhook\zydis\Zydis</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\zydis\Zydis\ShortString.h">
+      <Filter>lemonhook\zydis\Zydis</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\zydis\Zydis\Status.h">
+      <Filter>lemonhook\zydis\Zydis</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\zydis\Zydis\Utils.h">
+      <Filter>lemonhook\zydis\Zydis</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\zydis\Zydis\Zydis.h">
+      <Filter>lemonhook\zydis\Zydis</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\zydis\Zydis\Generated\EnumInstructionCategory.h">
+      <Filter>lemonhook\zydis\Zydis\Generated</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\zydis\Zydis\Generated\EnumISAExt.h">
+      <Filter>lemonhook\zydis\Zydis\Generated</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\zydis\Zydis\Generated\EnumISASet.h">
+      <Filter>lemonhook\zydis\Zydis\Generated</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\zydis\Zydis\Generated\EnumMnemonic.h">
+      <Filter>lemonhook\zydis\Zydis\Generated</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\zydis\Zydis\Generated\EnumRegister.h">
+      <Filter>lemonhook\zydis\Zydis\Generated</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\zydis\Zydis\Internal\DecoderData.h">
+      <Filter>lemonhook\zydis\Zydis\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\zydis\Zydis\Internal\FormatterATT.h">
+      <Filter>lemonhook\zydis\Zydis\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\zydis\Zydis\Internal\FormatterBase.h">
+      <Filter>lemonhook\zydis\Zydis\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\zydis\Zydis\Internal\FormatterIntel.h">
+      <Filter>lemonhook\zydis\Zydis\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\zydis\Zydis\Internal\SharedData.h">
+      <Filter>lemonhook\zydis\Zydis\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\zydis\Zydis\Internal\String.h">
+      <Filter>lemonhook\zydis\Zydis\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\zydis\Zycore\Allocator.h">
+      <Filter>lemonhook\zydis\Zycore</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\zydis\Zycore\ArgParse.h">
+      <Filter>lemonhook\zydis\Zycore</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\zydis\Zycore\Bitset.h">
+      <Filter>lemonhook\zydis\Zycore</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\zydis\Zycore\Comparison.h">
+      <Filter>lemonhook\zydis\Zycore</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\zydis\Zycore\Defines.h">
+      <Filter>lemonhook\zydis\Zycore</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\zydis\Zycore\Format.h">
+      <Filter>lemonhook\zydis\Zycore</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\zydis\Zycore\LibC.h">
+      <Filter>lemonhook\zydis\Zycore</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\zydis\Zycore\List.h">
+      <Filter>lemonhook\zydis\Zycore</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\zydis\Zycore\Object.h">
+      <Filter>lemonhook\zydis\Zycore</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\zydis\Zycore\Status.h">
+      <Filter>lemonhook\zydis\Zycore</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\zydis\Zycore\String.h">
+      <Filter>lemonhook\zydis\Zycore</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\zydis\Zycore\Types.h">
+      <Filter>lemonhook\zydis\Zycore</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\zydis\Zycore\Vector.h">
+      <Filter>lemonhook\zydis\Zycore</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\zydis\Zycore\Zycore.h">
+      <Filter>lemonhook\zydis\Zycore</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\zydis\Zycore\API\Memory.h">
+      <Filter>lemonhook\zydis\Zycore\API</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\zydis\Zycore\API\Process.h">
+      <Filter>lemonhook\zydis\Zycore\API</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\zydis\Zycore\API\Synchronization.h">
+      <Filter>lemonhook\zydis\Zycore\API</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\zydis\Zycore\API\Terminal.h">
+      <Filter>lemonhook\zydis\Zycore\API</Filter>
+    </ClInclude>
+    <ClInclude Include="lemonhook\zydis\Zycore\API\Thread.h">
+      <Filter>lemonhook\zydis\Zycore\API</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="imgui">
+      <UniqueIdentifier>{35e52e05-372f-4731-b811-97ea738ac61b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lemonhook">
+      <UniqueIdentifier>{2b5e6458-fcab-494d-8e99-d230bad95376}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lemonhook\include">
+      <UniqueIdentifier>{0880e0ab-7a9a-49b6-b9ea-9f145de42664}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lemonhook\src">
+      <UniqueIdentifier>{6e67cc3d-1680-4680-b6b1-fb4fc93901de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lemonhook\xbyak">
+      <UniqueIdentifier>{4e056d9a-f7cf-407d-87d5-9bc5b14fec0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lemonhook\zydis">
+      <UniqueIdentifier>{ef3c7a83-39c5-4cae-b6bc-7847843a722d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lemonhook\include\lemon">
+      <UniqueIdentifier>{a576d60c-8413-4615-a142-62bfc8c5167e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lemonhook\include\lemon\details">
+      <UniqueIdentifier>{b41296a4-db93-4d83-a3c0-468811c2be94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lemonhook\src\details">
+      <UniqueIdentifier>{825cbf68-0fb1-4045-8534-fbe3d9b070cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lemonhook\zydis\Zycore">
+      <UniqueIdentifier>{b1b042e5-590e-4899-8c13-13f86346b738}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lemonhook\zydis\Zydis">
+      <UniqueIdentifier>{7639ea76-9e59-4176-bdcc-8ecac9472040}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lemonhook\zydis\Zydis\Generated">
+      <UniqueIdentifier>{30eeae36-c7f9-4624-89c8-1458c677424d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lemonhook\zydis\Zydis\Internal">
+      <UniqueIdentifier>{2d77eae5-da88-4a36-a42c-9780e85de0ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lemonhook\zydis\Zycore\API">
+      <UniqueIdentifier>{6da77244-469d-40cb-bf1a-fa17f425e4e5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="lemonhook\lemonhook">
+      <Filter>lemonhook</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="lemonhook\zydis\Zycore.lib">
+      <Filter>lemonhook\zydis</Filter>
+    </Library>
+    <Library Include="lemonhook\zydis\Zydis.lib">
+      <Filter>lemonhook\zydis</Filter>
+    </Library>
+  </ItemGroup>
+</Project>

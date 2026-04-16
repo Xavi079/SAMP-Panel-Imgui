@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE}</ProjectGuid>
+    <RootNamespace>panel</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <TargetExt>.asi</TargetExt>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..</OutDir>
+    <IntDir>$(SolutionDir)obj\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>
+        $(ProjectDir);
+        $(ProjectDir)lemonhook\include;
+        $(ProjectDir)lemonhook\include\lemon;
+        $(ProjectDir)lemonhook;
+        $(ProjectDir)lemonhook\zydis
+      </AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>
+        $(ProjectDir)lemonhook\zydis
+      </AdditionalLibraryDirectories>
+      <AdditionalDependencies>
+        Zydis.lib;Zycore.lib;d3d9.lib;%(AdditionalDependencies)
+      </AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="imgui\imconfig.h" />
+    <ClInclude Include="imgui\imgui.h" />
+    <ClInclude Include="imgui\imgui_impl_dx9.h" />
+    <ClInclude Include="imgui\imgui_impl_win32.h" />
+    <ClInclude Include="imgui\imgui_internal.h" />
+    <ClInclude Include="imgui\imstb_rectpack.h" />
+    <ClInclude Include="imgui\imstb_textedit.h" />
+    <ClInclude Include="imgui\imstb_truetype.h" />
+    <ClInclude Include="lemonhook\include\lemon\details\details.hpp" />
+    <ClInclude Include="lemonhook\include\lemon\details\detour_base.hpp" />
+    <ClInclude Include="lemonhook\include\lemon\details\detour_callback.hpp" />
+    <ClInclude Include="lemonhook\include\lemon\details\hook_base.hpp" />
+    <ClInclude Include="lemonhook\include\lemon\details\hook_callback.hpp" />
+    <ClInclude Include="lemonhook\include\lemon\detour.hpp" />
+    <ClInclude Include="lemonhook\include\lemon\hook.hpp" />
+    <ClInclude Include="lemonhook\include\lemon\mem.hpp" />
+    <ClInclude Include="lemonhook\xbyak\xbyak.h" />
+    <ClInclude Include="lemonhook\xbyak\xbyak_bin2hex.h" />
+    <ClInclude Include="lemonhook\xbyak\xbyak_mnemonic.h" />
+    <ClInclude Include="lemonhook\xbyak\xbyak_util.h" />
+    <ClInclude Include="lemonhook\zydis\ZycoreExportConfig.h" />
+    <ClInclude Include="lemonhook\zydis\Zycore\Allocator.h" />
+    <ClInclude Include="lemonhook\zydis\Zycore\API\Memory.h" />
+    <ClInclude Include="lemonhook\zydis\Zycore\API\Process.h" />
+    <ClInclude Include="lemonhook\zydis\Zycore\API\Synchronization.h" />
+    <ClInclude Include="lemonhook\zydis\Zycore\API\Terminal.h" />
+    <ClInclude Include="lemonhook\zydis\Zycore\API\Thread.h" />
+    <ClInclude Include="lemonhook\zydis\Zycore\ArgParse.h" />
+    <ClInclude Include="lemonhook\zydis\Zycore\Bitset.h" />
+    <ClInclude Include="lemonhook\zydis\Zycore\Comparison.h" />
+    <ClInclude Include="lemonhook\zydis\Zycore\Defines.h" />
+    <ClInclude Include="lemonhook\zydis\Zycore\Format.h" />
+    <ClInclude Include="lemonhook\zydis\Zycore\LibC.h" />
+    <ClInclude Include="lemonhook\zydis\Zycore\List.h" />
+    <ClInclude Include="lemonhook\zydis\Zycore\Object.h" />
+    <ClInclude Include="lemonhook\zydis\Zycore\Status.h" />
+    <ClInclude Include="lemonhook\zydis\Zycore\String.h" />
+    <ClInclude Include="lemonhook\zydis\Zycore\Types.h" />
+    <ClInclude Include="lemonhook\zydis\Zycore\Vector.h" />
+    <ClInclude Include="lemonhook\zydis\Zycore\Zycore.h" />
+    <ClInclude Include="lemonhook\zydis\ZydisExportConfig.h" />
+    <ClInclude Include="lemonhook\zydis\Zydis\Decoder.h" />
+    <ClInclude Include="lemonhook\zydis\Zydis\DecoderTypes.h" />
+    <ClInclude Include="lemonhook\zydis\Zydis\Formatter.h" />
+    <ClInclude Include="lemonhook\zydis\Zydis\FormatterBuffer.h" />
+    <ClInclude Include="lemonhook\zydis\Zydis\Generated\EnumInstructionCategory.h" />
+    <ClInclude Include="lemonhook\zydis\Zydis\Generated\EnumISAExt.h" />
+    <ClInclude Include="lemonhook\zydis\Zydis\Generated\EnumISASet.h" />
+    <ClInclude Include="lemonhook\zydis\Zydis\Generated\EnumMnemonic.h" />
+    <ClInclude Include="lemonhook\zydis\Zydis\Generated\EnumRegister.h" />
+    <ClInclude Include="lemonhook\zydis\Zydis\Internal\DecoderData.h" />
+    <ClInclude Include="lemonhook\zydis\Zydis\Internal\FormatterATT.h" />
+    <ClInclude Include="lemonhook\zydis\Zydis\Internal\FormatterBase.h" />
+    <ClInclude Include="lemonhook\zydis\Zydis\Internal\FormatterIntel.h" />
+    <ClInclude Include="lemonhook\zydis\Zydis\Internal\SharedData.h" />
+    <ClInclude Include="lemonhook\zydis\Zydis\Internal\String.h" />
+    <ClInclude Include="lemonhook\zydis\Zydis\MetaInfo.h" />
+    <ClInclude Include="lemonhook\zydis\Zydis\Mnemonic.h" />
+    <ClInclude Include="lemonhook\zydis\Zydis\Register.h" />
+    <ClInclude Include="lemonhook\zydis\Zydis\SharedTypes.h" />
+    <ClInclude Include="lemonhook\zydis\Zydis\ShortString.h" />
+    <ClInclude Include="lemonhook\zydis\Zydis\Status.h" />
+    <ClInclude Include="lemonhook\zydis\Zydis\Utils.h" />
+    <ClInclude Include="lemonhook\zydis\Zydis\Zydis.h" />
+    <ClInclude Include="main.hpp" />
+    <ClInclude Include="panel.hpp" />
+    <ClInclude Include="wnd_proc.hpp" />
+    <ClInclude Include="samp_base.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="entry.cpp" />
+    <ClCompile Include="imgui\imgui.cpp" />
+    <ClCompile Include="imgui\imgui_draw.cpp" />
+    <ClCompile Include="imgui\imgui_impl_dx9.cpp" />
+    <ClCompile Include="imgui\imgui_impl_win32.cpp" />
+    <ClCompile Include="imgui\imgui_tables.cpp" />
+    <ClCompile Include="imgui\imgui_widgets.cpp" />
+    <ClCompile Include="lemonhook\src\details\details.cpp" />
+    <ClCompile Include="lemonhook\src\details\detour_base.cpp" />
+    <ClCompile Include="lemonhook\src\mem.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="panel.cpp" />
+    <ClCompile Include="wnd_proc.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="lemonhook\lemonhook" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="lemonhook\zydis\Zycore.lib" />
+    <Library Include="lemonhook\zydis\Zydis.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>
